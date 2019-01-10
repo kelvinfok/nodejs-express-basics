@@ -1,0 +1,23 @@
+extends layouts/main-layout.pug
+
+block content
+        main
+            if prods.length > 0
+                .grid
+                    each product in prods
+                        article.card.product-item
+                            header.card__header
+                                h1.product__title #{product.title}
+                            .card__image
+                                img(src="https://steemitimages.com/p/pBMyo3B2Sao2EbuHAFTX1CNWMbam25xJGPs4sKmLS6XL7jM7iUd9Ee1DAU9nbDS55vQKsL1TugsD5g6i5v2aku7i3dG2t1wwxtyNJ7ikNwV62q7MWsaQ9w9shCbVZNKSz74Wzq54PXEXFFX4dYxAVRkV9gpoiQVncbrPqMX1X7XCVdJn?format=match&mode=fit&width=640", alt="")
+                            .card__content
+                                h2.product__price $19.99
+                                p.product__description Interesting book
+                            .card_actions
+                                button.btn Add to Cart
+            else
+                h1 No listings    
+
+
+
+
